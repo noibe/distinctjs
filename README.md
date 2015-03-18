@@ -1,2 +1,2 @@
-# distinctjs
+# DistinctJS
 Home of Villa DistinctJS
