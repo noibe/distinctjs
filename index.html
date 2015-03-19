@@ -29,7 +29,67 @@
 </head>
 <body>
 
+<style>
+	
+	.block {
+		padding: 0;
+	}
 
+	.block .content,
+	.block .nav {
+		align-items: center;
+		display: flex;
+	}
+
+	.block .content {
+		align-items: center;
+		height: 400px;
+		justify-content: center;
+	}
+
+	.block .nav {
+		height: 50px;
+		justify-content: space-around;
+	}
+
+	.block .nav .item {
+		width: 100px;
+	}
+
+	.block .content .item {
+		display: none;
+		font-size: 2em;
+	}
+
+	.block.item-1 .content .item:nth-of-type(1),
+	.block.item-2 .content .item:nth-of-type(2),
+	.block.item-3 .content .item:nth-of-type(3),
+	.block.item-4 .content .item:nth-of-type(4),
+	.block.item-5 .content .item:nth-of-type(5) {
+		display: block;
+	}
+
+
+</style>
+
+<!--.block>((.nav>.item{menu $}*5)+(.content>.item{content $}*5))-->
+
+<div class="block">
+	<div class="nav grey-900 font-white">
+		<div class="item">menu 1</div>
+		<div class="item">menu 2</div>
+		<div class="item">menu 3</div>
+		<div class="item">menu 4</div>
+		<div class="item">menu 5</div>
+	</div>
+	<div class="content">
+		<div class="item">content 1</div>
+		<div class="item">content 2</div>
+		<div class="item">content 3</div>
+		<div class="item">content 4</div>
+		<div class="item">content 5</div>
+	</div>
+</div>
 
 <script src="js/app.js"></script>
 

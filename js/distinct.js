@@ -8,7 +8,7 @@
 	'use strict';
 
 	/* Constructor of distinct functions */
-	$.fn.distinct = function (listener, options) {
+	$.fn.distinct = function (options) {
 
 		var settings = $.extend({
 			action: false,
@@ -18,7 +18,7 @@
 			plusOne: false,
 			prefix: false,
 			selfAction: false,
-			target: "body",
+			target: 'body',
 			touchEvents: true
 		}, options);
 
