@@ -53,12 +53,24 @@
 	}
 
 	.block .nav .item {
+		background: none;
+		border: none;
+		color: inherit;
 		width: 100px;
 	}
 
 	.block .content .item {
 		display: none;
 		font-size: 2em;
+	}
+
+	.block .content .welcome {
+		font-size: 4em;
+		font-weight: 100;
+	}
+
+	.block[class*="item"] .content .welcome {
+		display: none;
 	}
 
 	.block.item-1 .content .item:nth-of-type(1),
@@ -69,18 +81,17 @@
 		display: block;
 	}
 
-
 </style>
 
-<!--.block>((.nav>.item{menu $}*5)+(.content>.item{content $}*5))-->
+<!--.block>((.nav>button.item{menu $}*5)+(.content>.item{content $}*5+.welcome{DistinctJS))-->
 
 <div class="block">
 	<div class="nav grey-900 font-white">
-		<div class="item">menu 1</div>
-		<div class="item">menu 2</div>
-		<div class="item">menu 3</div>
-		<div class="item">menu 4</div>
-		<div class="item">menu 5</div>
+		<button class="item">menu 1</button>
+		<button class="item">menu 2</button>
+		<button class="item">menu 3</button>
+		<button class="item">menu 4</button>
+		<button class="item">menu 5</button>
 	</div>
 	<div class="content">
 		<div class="item">content 1</div>
@@ -88,6 +99,7 @@
 		<div class="item">content 3</div>
 		<div class="item">content 4</div>
 		<div class="item">content 5</div>
+		<div class="welcome">DistinctJS</div>
 	</div>
 </div>
 
