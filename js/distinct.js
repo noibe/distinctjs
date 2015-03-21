@@ -8,7 +8,7 @@
 	'use strict';
 
 	/* Constructor of distinct functions */
-	$.fn.distinct = function (options) {
+	$.fn.distinct = function (options, events) {
 
 		var settings = $.extend({
 			action: false,
@@ -27,10 +27,10 @@
 		// Add Touch and Mouse Listeners to elements
 		this.each(function() {
 			if (settings.touchEvents) {
-				this.addEventListener("touchstart", handleController, false);
+				this.addEventListener('touchstart', handleController, false);
 			}
 
-			this.addEventListener("click", handleController, false);
+			this.addEventListener('click', handleController, false);
 		});
 
 		// Handle Controller (start the actions with the listeners (touch or mouse))
